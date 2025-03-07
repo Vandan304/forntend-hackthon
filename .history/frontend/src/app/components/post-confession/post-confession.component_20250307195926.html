@@ -1,0 +1,32 @@
+<div class="typewriter-container">
+    <div class="type-left">
+        <div class="hi-there">Hi There! <span>👋🏻</span></div>
+        <!-- <div class="title">Privacy is power. Speak freely with Anonymous</div> -->
+        <span class="typewriter-text">{{ currentMessage }}</span>
+        <span class="cursor">|</span>
+    </div>
+    <div class="type-right">
+        <img src="images/image-3.webp" alt="">
+    </div>
+    
+</div>
+  
+
+
+<!--  -->
+<div class="post-conf">
+    <div class="confession-container">
+      <h2 class="confession-title">🔮 Confessions of a Hidden Soul</h2>
+      <textarea [(ngModel)]="textBox" placeholder="Write your confessions here..."></textarea>
+      <button (click)="onSave()">Post Confession</button>
+    </div>
+    <div class="box-container">
+      <div class="box" *ngFor="let confession of confessions">
+        <div class="user-info">
+          <p>#{{ confession.userId }} </p>  <span class="timestamp">{{ confession.timestamp }}</span>
+        </div>
+        <p class="confession-text">{{ confession.text }}</p>
+      </div>
+    </div>
+  </div>
+  
